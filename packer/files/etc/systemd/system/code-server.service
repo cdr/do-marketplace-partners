@@ -3,7 +3,7 @@ Description=code-server
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/docker run -p 443:443 -v /root/project:/home/coder/project codercom/code-server:v2
+ExecStart=/usr/local/bin/code-server
 
 [Install]
 WantedBy=multi-user.target

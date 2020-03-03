@@ -27,6 +27,11 @@
       "destination": "/var/"
     },
     {
+      "type": "file",
+      "source": "files/usr/",
+      "destination": "/usr/"
+    },
+    {
       "type": "shell",
       "inline": [
         "cloud-init status --wait",
@@ -39,9 +44,12 @@
       "type": "shell",
       "scripts": [
         "scripts/01-test",
+        "scripts/02-docker.sh",
+        "scripts/03-code-server.sh",
+        "scripts/04-security-updates.sh",
+        "scripts/05-add-user.sh",
         "scripts/90-cleanup.sh",
-        "scripts/99-img_check.sh",
-        "scripts/02-docker.sh"
+        "scripts/99-img_check.sh"
       ]
     }
   ]

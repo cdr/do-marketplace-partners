@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-set -euxo pipefail
-
-apt-get update && apt-get install -y \
-	apt-transport-https \
-	ca-certificates \
-	curl \
-	gnupg-agent \
-	software-properties-common
+set -euo pipefail
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 
@@ -16,6 +9,4 @@ add-apt-repository \
 	$(lsb_release -cs) \
 	stable"
 
-apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io
-
-systemctl enable code-server
+apt-get update && apt-get install -y  docker-ce docker-ce-cli containerd.io
