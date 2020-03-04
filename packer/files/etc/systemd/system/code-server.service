@@ -1,0 +1,9 @@
+[Unit]
+Description=code-server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/code-server
+
+[Install]
+WantedBy=multi-user.target
