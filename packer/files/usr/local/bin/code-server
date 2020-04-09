@@ -11,7 +11,4 @@ if [[ ! -f /etc/code-server/pass ]]; then
 	cat /dev/urandom | head -c 8 | base64 >> /etc/code-server/pass
 fi
 
-docker run -e "PASSWORD=$(cat /etc/code-server/pass)" \
-	-p 443:8443 -v /home/coder:/home/coder \
-	-v /home/coder/project:/home/coder/project \
-	codercom/code-server:v2 --cert --port 8443
+PASSWORD=$(cat /etc/code-server/pass) /usr/local/lib/code-server/code-server --cert --port 443 --host 0.0.0.0

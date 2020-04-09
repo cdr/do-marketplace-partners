@@ -44,10 +44,9 @@
       "type": "shell",
       "scripts": [
         "scripts/01-test",
-        "scripts/02-docker.sh",
-        "scripts/03-code-server.sh",
-        "scripts/04-security-updates.sh",
-        "scripts/05-add-user.sh",
+        "scripts/02-setup-code-server.sh",
+        "scripts/03-security-updates.sh",
+        "scripts/04-add-user.sh",
         "scripts/90-cleanup.sh",
         "scripts/99-img_check.sh"
       ]

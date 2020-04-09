@@ -3,6 +3,8 @@ Description=code-server
 After=network.target
 
 [Service]
+User=coder
+Group=coder
 ExecStart=/usr/local/bin/code-server
 
 [Install]
